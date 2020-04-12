@@ -2,6 +2,7 @@
 
 spotifyUser="yourspotifyaccount" # the one from your account page which is not necessarily the one displayed in the top right hand corner
 accessToken="youraccesstoken"
+countryCode="DE"
 fileGPM="gpm.txt"
 sleepInterval=0.1 # in seconds between adding two albums
 resCategory="albums" # or topHit
@@ -9,7 +10,7 @@ resCategory="albums" # or topHit
 for searchString in `cat ${fileGPM}`; do
 	echo -n "Searching ${searchString}:"
 
-	searchRes=`curl -s "https://spclient.wg.spotify.com/searchview/km/v4/search/${searchString}?entityVersion=2&catalogue=&country=DE" -H "authorization: ${accessToken}" --compressed`
+	searchRes=`curl -s "https://spclient.wg.spotify.com/searchview/km/v4/search/${searchString}?entityVersion=2&catalogue=&country=D${countryCode}" -H "authorization: ${accessToken}" --compressed`
 
 	searchResError=`echo ${searchRes} | jq -j .error`
 	if [[ "${searchResError}" == "" || "${searchResError}" == "null" ]]; then
