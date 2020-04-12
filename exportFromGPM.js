@@ -9,7 +9,7 @@
 // ==/UserScript==
 // Originally by:
 // Jeremie Miserez <jeremie@miserez.org>, 2015
-//
+// Find my modified Gist here: https://gist.github.com/goforthanddie/73ca9559968ca2e31dc76faa475d87db
 // Adjusted to scrape only albums from Google Play Music and prepare a list for import to Spotify. Not caring about separate songs - albums only.
 //
 // 1. Go to: https://play.google.com/music/listen#/albums (any other listing might screw up or result in infinite loops ;))
