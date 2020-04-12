@@ -7,5 +7,5 @@ I tested this solution only for transfering complete albums from GPM to Spotify,
 
 What you need:
 
-Browser with Tampermonkey http://tampermonkey.net/ to extract the data from GPM
-bash with curl and jq to parse JSON to import the data in Spotify
+- Browser with Tampermonkey http://tampermonkey.net/ to extract the data from GPM
+- ```bash``` with ```curl``` and ```jq``` to parse JSON to import the data in Spotify
