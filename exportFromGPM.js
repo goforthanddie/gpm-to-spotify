@@ -1,5 +1,25 @@
-
-n() {
+// ==UserScript==
+// @name         GPM Album Export
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Export your GPM Albums
+// @author       Me
+// @match        https://play.google.com/music/listen
+// @grant        none
+// ==/UserScript==
+// Originally by:
+// Jeremie Miserez <jeremie@miserez.org>, 2015
+//
+// Adjusted to scrape only albums from Google Play Music and prepare a list for import to Spotify. Not caring about separate songs - albums only.
+//
+// 1. Go to: https://play.google.com/music/listen#/albums (any other listing might screw up or result in infinite loops ;))
+//
+// 2. If you do not have Tampermonkey, install it for your browser and start over at 1. :D.
+//
+// 3. Notice the little "Scrape data!" field at the bottom right hand corner, click it once the albums have loaded. Wait until the page has scrolled to the bottom.
+//    The data should be copied automatically to your clipboard once finished which is indicated by the field showing "Scrape again!".
+//
+(function() {
     'use strict';
 
     var outText = "";
